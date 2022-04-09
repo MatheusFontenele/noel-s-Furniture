@@ -17,16 +17,15 @@ function App() {
 
     const timeline = gsap.timeline();
 
-    timeline
-      .from(".div2", { xPercent: -100 })
-      .from(".div3", { yPercent: -100 })
-      .from(".div4", { xPercent: -100 });
+    timeline.from(".div2", { xPercent: -100 });
+    timeline.from(".div3", { yPercent: -100 });
+    timeline.from(".div4", { xPercent: -100 });
 
     ScrollTrigger.create({
       animation: timeline,
       trigger: "#container",
       start: "top top",
-      end: "+=4000",
+      end: "+=100",
       scrub: true,
       pin: true,
       anticipatePin: 1,
@@ -43,41 +42,7 @@ function App() {
           <h1>hello world section</h1>
         </div>
       </section> */}
-      <div
-        className="div1"
-        style={{
-          height: "100vh",
-          background: "#000",
-          color: "white",
-        }}
-      >
-        <div
-          className="div2"
-          style={{
-            height: "100vh",
-            background: "blue",
-            color: "white",
-          }}
-        >
-          <div
-            className="div3"
-            style={{
-              height: "100vh",
-              background: "green",
-              color: "white",
-            }}
-          >
-            <div
-              className="div4"
-              style={{
-                height: "100vh",
-                background: "gray",
-                color: "white",
-              }}
-            ></div>
-          </div>
-        </div>
-      </div>
+      <div className="div1"> hello world</div>
     </div>
   );
 }
